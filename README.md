@@ -1,30 +1,70 @@
-# Sentiment Analysis of Sunan Drajat Tourist Attractions – Lamongan
+# Sentiment Analysis of Sunan Drajat Tourism in Lamongan with K‑Nearest Neighbors (KNN)
 
 ## 📌 Project Overview
-This project conducts sentiment analysis on reviews related to **Sunan Drajat tourism site in Lamongan**, aiming to classify public opinion into positive, neutral, or negative sentiments. The classification is performed using the **K‑Nearest Neighbors (KNN)** algorithm.
+This project analyzes public sentiment toward the Sunan Drajat tourism site in Lamongan by classifying opinion texts as positive, neutral, or negative, using the K‑Nearest Neighbors (KNN) classification algorithm.
 
-## 🧠 Objectives
-- Analyze public sentiment toward Sunan Drajat tourism attractions.
-- Implement KNN classification to categorize sentiment polarity.
-- Provide insights for local tourism stakeholders to improve visitor experience.
+## 🚀 Objectives
+- Collect and preprocess public reviews or comments about Sunan Drajat tourism in Lamongan.
+- Perform Exploratory Data Analysis (EDA) to understand sentiment distribution.
+- Represent text data using appropriate features (e.g. TF‑IDF or bag-of-words).
+- Train and evaluate a KNN classifier for sentiment classification.
+- Identify which sentiment category appears most frequently.
+- Offer insights or recommendations for improving tourist satisfaction.
 
 ## 🔍 Methodology
-1. **Data Collection**  
-   Gather textual reviews or comments about Sunan Drajat tourism (e.g. from social media, review platforms).
+1. **Data Collection & Preprocessing**  
+   - Web scraping or gathering review/comments data
+   - Text normalization: tokenization, lowercasing, stop-word removal, stemming/lemmatizing
 
-2. **Preprocessing & Feature Engineering**  
-   - Text cleaning (tokenization, stopword removal, lowercasing)  
-   - Vectorization (e.g., TF-IDF or Count Vectorizer)
+2. **Exploratory Data Analysis**  
+   - Visualize sentiment distribution (bar charts, pie charts)
+   - Word frequency analysis for each sentiment category
 
-3. **Modeling**  
-   - Train a **KNN classifier** for sentiment classification (positive / neutral / negative)
+3. **Feature Engineering**  
+   - Apply TF‑IDF or bag-of-words to vectorize text
+   - Optional: Use techniques like Information Gain for feature selection
 
-4. **Evaluation**  
-   - Assess performance using accuracy, precision, recall, and F1-score
+4. **Machine Learning: K‑Nearest Neighbors (KNN)**
+   - Train a KNN classifier using the extracted features
+   - Tune hyperparameters (e.g. k, distance metric)
+     
+6. **Model Evaluation**
+   - Evaluate using metrics: Accuracy, Precision, Recall, F1-score
+   - Use confusion matrix and cross-validation if applicable
+     
+7. **Conclusion & Insights**
+   - Identify the dominant sentiment (positive/neutral/negative)
+   - Suggest recommendations for tourism stakeholders based on sentiment trends
 
-## 🧰 Technologies Used
-- **Python**  
-  - Libraries: pandas, NumPy, scikit-learn, NLTK / spaCy  
-- **Visualization**: seaborn, matplotlib for result interpretation
+## 🛠 Dependencies & Technologies
+- Programming Language: Python
+- Libraries: pandas, NumPy, scikit-learn, matplotlib / seaborn
+- Text Processing: NLTK or spaCy; scikit-learn’s TF‑IDF
+- Machine Learning Model: scikit-learn’s KNeighborsClassifier
 
 ## 📁 Repository Structure
+sentiment-analysis-sunan-drajat/  
+├── data/                # Raw and cleaned review text data  
+├── notebooks/           # EDA and modeling notebooks  
+├── src/                 # Scripts for preprocessing, feature extraction, modeling  
+├── results/             # Model evaluation results & visualizations  
+├── README.md            # Project documentation  
+
+## 🎯 How to Reproduce
+1. Clone the repository:
+   git clone https://github.com/rizkyjisantt-dev/sentiment-analysis-sunan-drajat.git
+   cd sentiment-analysis-sunan-drajat
+2. Install dependencies:
+   pip install -r requirements.txt
+3. Run notebooks or scripts for preprocessing, modeling, and evaluation.
+
+## 📊 Related Research
+Sentiment analysis of Indonesian tourism has shown KNN to be effective in classifying public sentiment, similar to other case studies on tourism sentiment using KNN and SVM methods
+
+## 📈 Expected Outcome
+- Visualizations showing public sentiment distribution toward Sunan Drajat tourism.
+- Performance metrics of your KNN classifier.
+- Clear insights and recommendations for tourism stakeholders.
+
+## 📌 Contributions & License
+This repository is open for contributions. Feel free to submit pull requests or open issues for feedback and collaboration.
